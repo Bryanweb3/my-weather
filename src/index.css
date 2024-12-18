@@ -1,0 +1,26 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.song-recommendations{
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    display: flex;gap: 30px;
+}
+
+
+.song-recommendations h2{
+    color: rgb(44, 152, 116);
+}
+
+.song-recommendations li{
+    list-style: none;
+    text-decoration: none;
+}

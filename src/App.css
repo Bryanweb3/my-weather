@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+h1{
+    font-size:  6rem;
+}
+
+.app{
+   width: 100%;
+   height: 100vh;
+   position: relative;
+   background-color: transparent;
+   color: rgb(46, 44, 44);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+
+.app:before{
+    content: '';
+    background:url('./assets/photo-1530908295418-a12e326966ba.avif')no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+     
+}
+
+
+.container{
+    max-width: 700px;
+    height: 700px;
+    margin: auto;
+    padding: 0 1rem ;
+    position: relative;
+    top:10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.app .top{
+    width: 100%;
+    margin: 1rem auto;
+}
+
+
+.app .description{
+    position: relative;
+    top: -30px;
+    right: -90%;
+    color: beige;
+    transform-origin: 0 0;
+    transform: rotate(deg)
+    
+}
+
+.app .location p{
+  color: rgb(2, 91, 18);
+}
+
+.app .temp h1{
+  color: rgb(127, 204, 255);
+}
+
+.app .temp p{
+  color: antiquewhite;
+}
+
+
+
+.app .bottom{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    top: 70px;
+    color: rgb(247, 243, 243);
+    gap: 50px; /* increased gap between condition, humidity and wind speed */
+}
+
+
+.bold{
+    font-weight: 700 ;
+}
+.search input{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 30%;
+    position: absolute;
+    top: 5%;
+    border: 1px solid rgb(173, 248, 236);
+    border-radius: 12px;
+    padding: 10px;
+    background-color: rgba(164, 226, 241, 0.5);
+}
+
+/* added media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+  .app .bottom {
+    flex-direction: column;
+    gap: 20px; /* adjusted gap for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 300px;
+  }
+  .app .bottom {
+    padding: 0.5rem;
+    gap: 10px; /* adjusted gap for smaller screens */
+  }
+}
